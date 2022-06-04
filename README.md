@@ -1,6 +1,6 @@
 # **Solution for data-processing (dkatalis_amaan)**
 
-## 1. Instalation docker container (contain solution.py)
+## 1. Instalation & run docker container (run python scripts solution.py)
 
 a. Please install docker first before doing next step, this is step installation docker for ubuntu https://linuxhint.com/install_configure_docker_ubuntu/
 
