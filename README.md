@@ -16,6 +16,8 @@ f. Build docker container (this container will be name as dkatalis_amaan) using 
 
 g. To run that docker using command **docker run dkatalis_amaan**
 
+h. if you want see the coding solution use command **docker run -it dkatalis_solution /bin/bash**, and then goto solution folder and use command **nano solution.py** to see code 
+
 
 
 
