@@ -48,8 +48,10 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
 
 3. From result from point no 2, discuss how many transactions has been made, when did each of them occur, and how much the value of each transaction?  
    Transaction is defined as activity which change the balance of the savings account or credit used of the card
+   
    a. transaction in card table join with account (credit used) have 3 transaction
    ![image](https://user-images.githubusercontent.com/55681442/171986685-7f1b71b7-371d-4e3c-bc80-41c94d52f343.png)
+   
    b. transaction in saving account joint with account have 4 transaction (change balance)
    ![image](https://user-images.githubusercontent.com/55681442/171986733-98bf5b0b-c3e9-4dad-9fdd-e8745f5f98bd.png)
 
