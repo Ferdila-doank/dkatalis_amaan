@@ -89,7 +89,7 @@ the logic of code solution.py is :
 5. Created method card_trans, this method processing data in df_card only with credit value != 0 and join with df_acc with key card_id
   ![image](https://user-images.githubusercontent.com/55681442/171986685-7f1b71b7-371d-4e3c-bc80-41c94d52f343.png)
 
-6. Create metho sav_trans, this method processing data in df_sv_acc with change saving balance and join with df_acc with key savings_account_id
+6. Create method sav_trans, this method processing data in df_sv_acc with change saving balance and join with df_acc with key savings_account_id
    ![image](https://user-images.githubusercontent.com/55681442/171986733-98bf5b0b-c3e9-4dad-9fdd-e8745f5f98bd.png)
   
 
