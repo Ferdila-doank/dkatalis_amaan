@@ -40,6 +40,7 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
   ![image](https://user-images.githubusercontent.com/55681442/171986598-6667f356-98ca-4584-80b9-7013987e6168.png)
   
 2. Visualize the complete historical table view of the denormalized joined table in stdout by joining these three tables (hint: the join key lies in the `resources` section, please read carefully)
+
   this data join all data in card with account 
   ![image](https://user-images.githubusercontent.com/55681442/171990108-c26738c3-f482-4e91-881d-5b677f49fa3b.png)
   this data join all data in saving_account with account 
