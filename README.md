@@ -62,22 +62,32 @@ the logic of code solution.py is :
 1. In init method will be declare path of data source (account, card and saving account) and declare column for each data 
 2. Create method processing data. in this method will be process each data in folder source. Json file will be transform to data frame(with tabular format) and store in df_log variable. Also will create other dataframe contain update data based on .json file fo example in account first json create 1 row and then in second json update phone number to new value. so in df will store original data from json and in df_log will be contain last update data based on last json file processed json file. 
 
-  \t this is sample df_log
+  this is sample df_log
 
-  \t ![image](https://user-images.githubusercontent.com/55681442/171990306-afc366d8-38a0-4e1c-8ddb-89b4bad0bd20.png)
+  ![image](https://user-images.githubusercontent.com/55681442/171990306-afc366d8-38a0-4e1c-8ddb-89b4bad0bd20.png)
 
   ![image](https://user-images.githubusercontent.com/55681442/171990322-41bfafdf-d41c-4ded-8a2e-e14944aa8a14.png)
 
-  \t this sample df
+  this sample df
 
-  \t ![image](https://user-images.githubusercontent.com/55681442/171990339-6f475e0a-a71c-46e1-a9fa-fcb7c8ff528d.png)
+  ![image](https://user-images.githubusercontent.com/55681442/171990339-6f475e0a-a71c-46e1-a9fa-fcb7c8ff528d.png)
 
-  \t ![image](https://user-images.githubusercontent.com/55681442/171990383-ad1f636b-f4f9-4619-affe-445ef3f41a32.png)
+  ![image](https://user-images.githubusercontent.com/55681442/171990383-ad1f636b-f4f9-4619-affe-445ef3f41a32.png)
 
-  \t in that picture show in index 0 create new data in df and df_log (create same data). But in index 1 because the json only update field phone_number, so in df_log contain only data phone_number but in df in index 1 get value from index 0 and update data phone_number 
+  In that picture show in index 0 create new data in df and df_log (create same data). But in index 1 because the json only update field phone_number, so in df_log contain only data phone_number but in df in index 1 get value from index 0 and update data phone_number 
 
-3. 
+3. Created method all_card_trans, this method is to join data df_acc with df_card with key is column card_id
 
+  ![image](https://user-images.githubusercontent.com/55681442/171990769-8633066f-fce9-4433-b8f5-e8f5b70020a6.png)
 
+4. Created method all_sv_trans, this method is to join data df_sv_acc with df_card with key is column savings_account_id
 
+  ![image](https://user-images.githubusercontent.com/55681442/171990805-90b6e467-0a44-4b6f-b692-c193a8b1f0b8.png)
+
+5. Created method card_trans, this method processing data in df_card only with credit value != 0 and join with df_acc with key card_id
+  ![image](https://user-images.githubusercontent.com/55681442/171986685-7f1b71b7-371d-4e3c-bc80-41c94d52f343.png)
+
+6. Create metho sav_trans, this method processing data in df_sv_acc with change saving balance and join with df_acc with key savings_account_id
+   ![image](https://user-images.githubusercontent.com/55681442/171986733-98bf5b0b-c3e9-4dad-9fdd-e8745f5f98bd.png)
+  
 
