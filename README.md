@@ -29,12 +29,14 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
   ![image](https://user-images.githubusercontent.com/55681442/171983415-7bfade6a-9dec-49af-aa4b-a4578b84bb59.png)
   
   b. table card 
+  
   this data originaly from source data (df_log)
   ![image](https://user-images.githubusercontent.com/55681442/171986526-512b3370-806d-4a1e-8461-93a18ad22834.png)
   this data contain last update data based on last json file processed (df).
   ![image](https://user-images.githubusercontent.com/55681442/171986537-e875719d-9d9c-4724-9514-c80dfb8ef895.png)
 
   c. table savings accounts
+  
   this data originaly from source data (df_log)
   ![image](https://user-images.githubusercontent.com/55681442/171986581-aa419cb6-1dfd-42a6-8604-570a66e59e69.png)
   this data contain last update data based on last json file processed (df).
