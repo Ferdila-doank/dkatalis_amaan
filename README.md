@@ -91,5 +91,9 @@ the logic of code solution.py is :
 
 6. Create method sav_trans, this method processing data in df_sv_acc with change saving balance and join with df_acc with key savings_account_id
    ![image](https://user-images.githubusercontent.com/55681442/171986733-98bf5b0b-c3e9-4dad-9fdd-e8745f5f98bd.png)
-  
+
+7. in main program will create object bank from class solution and call method already create and print the data 
+  ![image](https://user-images.githubusercontent.com/55681442/171991353-e6076ad9-a198-442b-b5c3-e3b6cbcdc702.png)
+
+
 
