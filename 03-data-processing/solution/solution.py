@@ -174,21 +174,7 @@ class solution:
         
         return df_sav_acc_trans
 
-    def ekspor_data(self,df_acc,df_log_acc,df_card,df_log_card,df_sv_acc,df_log_sv_acc):
-
-        writer = pd.ExcelWriter(self.path_xlsx+"/"+"bank_transaction.xlsx", engine = 'xlsxwriter')
-
-        df_acc.to_excel (writer, index = False, header=True,sheet_name="account")
-        df_log_acc.to_excel (writer, index = False, header=True,sheet_name="log_account")
-        df_card.to_excel (writer, index = False, header=True,sheet_name="card")
-        df_log_card.to_excel (writer, index = False, header=True,sheet_name="log_card")
-        df_sv_acc.to_excel (writer, index = False, header=True,sheet_name="saving_account")
-        df_log_sv_acc.to_excel (writer, index = False, header=True,sheet_name="log_saving_account")
-
-        writer.save()
-    
-
-if __name__ == '__main__':
+ if __name__ == '__main__':
 
     #create object bank from class solution
     bank = solution()
