@@ -23,23 +23,23 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
 
   a. table account 
   
-  this data originaly from source data (df_log)
+  this data originaly from source json file in folder /data/accounts/ store in df_log_acc
   ![image](https://user-images.githubusercontent.com/55681442/171983234-30849666-ce26-4de0-99bc-d4c5f944d431.png)
-  this data table contain last update data based on last json file processed (df).
+  this data table contain last update data based on last json file processed store in df_acc
   ![image](https://user-images.githubusercontent.com/55681442/171983415-7bfade6a-9dec-49af-aa4b-a4578b84bb59.png)
   
   b. table card 
   
-  this data originaly from source data (df_log)
+  this data originaly from source data json file store in folder /data/cards/ store in df_log_card
   ![image](https://user-images.githubusercontent.com/55681442/171986526-512b3370-806d-4a1e-8461-93a18ad22834.png)
-  this data contain last update data based on last json file processed (df).
+  this data contain last update data based on last json file processed store in df_card
   ![image](https://user-images.githubusercontent.com/55681442/171986537-e875719d-9d9c-4724-9514-c80dfb8ef895.png)
 
   c. table savings accounts
   
-  this data originaly from source data (df_log)
+  this data originaly from source data json file store in folder /data/cards/ store in df_log_sv_acc
   ![image](https://user-images.githubusercontent.com/55681442/171986581-aa419cb6-1dfd-42a6-8604-570a66e59e69.png)
-  this data contain last update data based on last json file processed (df).
+  this data contain last update data based on last json file processed store in df_sv_acc.
   ![image](https://user-images.githubusercontent.com/55681442/171986598-6667f356-98ca-4584-80b9-7013987e6168.png)
   
 2. Visualize the complete historical table view of the denormalized joined table in stdout by joining these three tables (hint: the join key lies in the `resources` section, please read carefully)
