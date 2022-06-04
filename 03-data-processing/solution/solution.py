@@ -183,58 +183,58 @@ class solution:
     df_acc,df_log_acc = bank.processing_data("account")
 
     #print df_log_acc get from processing file source account
-    print("\n Original data from file source account (tabular format)")
+    print("\n Original data from file source account (tabular format), Task 1")
     print(df_log_acc)
 
     #print df_acc get from processing file source & update base on value 
-    print("\n Update data based on file source account (tabular format)")
+    print("\n Update data based on file source account (tabular format), Task 1")
     print(df_acc)
 
     #run method bank.processing data fro processing data card 
     df_card,df_log_card = bank.processing_data("card")
 
     #print df_log_acc get from processing file source card
-    print("\n Original data from file source card (tabular format)")
+    print("\n Original data from file source card (tabular format), Task 1")
     print(df_log_card)    
 
     #print df_acc get from processing file source & update base on value
-    print("\n Update data based on file source card (tabular format)")
+    print("\n Update data based on file source card (tabular format), Task 1")
     print(df_card)
 
     #run method bank.processing data fro processing data saving_account 
     df_sv_acc,df_log_sv_acc = bank.processing_data("saving_account")
 
     #print df_log_acc get from processing file source saving account
-    print("\n Original data from file source saving account (tabular format)")
+    print("\n Original data from file source saving account (tabular format), Task 1")
     print(df_log_sv_acc)    
 
     #print df_acc get from processing file source & update base on value
-    print("\n Update data based on file source card (tabular format)")    
+    print("\n Update data based on file source card (tabular format), Task 1")    
     print(df_sv_acc)
 
     #run method bank.all_card_trans (all data card join with account)
     df_all_card_trans = bank.all_card_trans(df_acc,df_card)
 
     #print df_all_card_trans (all data card join with account)
-    print("\n all data card join with account")
+    print("\n all data card join with account, Task 2")
     print(df_all_card_trans)
 
     #run method bank.all_sv_trans (all data saving account join with account)
     df_all_sv_acc = bank.all_sv_trans(df_acc,df_sv_acc)
 
     #print df_all_card_trans (all data card join with account)
-    print("\n all data saving account join with account")   
+    print("\n all data saving account join with account, Task 2")   
     print(df_all_sv_acc)
 
     #processing card transaction (credit value != 0) using method bank.card_trans 
     df_card_trans = bank.card_trans(df_acc,df_card)
 
     #print card transaction (credit value != 0)
-    print ("\n Card transaction (credit value != 0)")
+    print ("\n Card transaction (credit value != 0), Task 3")
     print(df_card_trans)
 
     #processing savings accounts transaction (change balance) using method bank.sav_trans 
     df_sav_acc = bank.sav_trans(df_acc,df_sv_acc)
 
-    print("\n Savings accounts transaction (change balance)")
+    print("\n Savings accounts transaction (change balance), Task 3")
     print(df_sav_acc)
