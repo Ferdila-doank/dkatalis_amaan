@@ -104,9 +104,7 @@ the logic of code solution.py is :
   
   ![image](https://user-images.githubusercontent.com/55681442/171990805-90b6e467-0a44-4b6f-b692-c193a8b1f0b8.png)
   
-  after that two table combine and the have result like this
-  
-  ![image](https://user-images.githubusercontent.com/55681442/171990143-038de618-ec82-4191-b1c5-8661a1fe1b4a.png)
+  after that two table combine and the have result like that
 
 5. Created method card_trans, this method processing data in df_card only with credit value != 0 and join with df_acc with key card_id
   ![image](https://user-images.githubusercontent.com/55681442/171986685-7f1b71b7-371d-4e3c-bc80-41c94d52f343.png)
