@@ -94,6 +94,7 @@ the logic of code solution.py is :
 
 7. in main program will create object bank from class solution and call method already create and print the data 
   ![image](https://user-images.githubusercontent.com/55681442/171991353-e6076ad9-a198-442b-b5c3-e3b6cbcdc702.png)
+  ![image](https://user-images.githubusercontent.com/55681442/171991384-ace5e63c-ac93-4f04-8533-229b9abdc351.png)
 
 
 
