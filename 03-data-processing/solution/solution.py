@@ -203,7 +203,7 @@ if __name__ == '__main__':
     print(df_card)
 
     #run method bank.processing data fro processing data saving_account 
-    df_sv_acc,df_log_sv_acc = bank.processing_data("saving_account, Task 1")
+    df_sv_acc,df_log_sv_acc = bank.processing_data("saving_account")
 
     #print df_log_acc get from processing file source saving account
     print("\n Original data from file source saving account (tabular format), Task 1")
