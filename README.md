@@ -22,24 +22,28 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
 1. Visualize the complete historical table view of each tables in tabular format in stdout (hint: print your table)
 
   a. table account 
-  this data table originaly from source data (df_log)
+  this data originaly from source data (df_log)
   ![image](https://user-images.githubusercontent.com/55681442/171983234-30849666-ce26-4de0-99bc-d4c5f944d431.png)
-  this data table contain contain last update data based on last json file processed (df).
+  this data table contain last update data based on last json file processed (df).
   ![image](https://user-images.githubusercontent.com/55681442/171983415-7bfade6a-9dec-49af-aa4b-a4578b84bb59.png)
   
   b. table card 
-  this data table originaly from source data (df_log)
+  this data originaly from source data (df_log)
   ![image](https://user-images.githubusercontent.com/55681442/171986526-512b3370-806d-4a1e-8461-93a18ad22834.png)
-  this data table contain contain last update data based on last json file processed (df).
+  this data contain last update data based on last json file processed (df).
   ![image](https://user-images.githubusercontent.com/55681442/171986537-e875719d-9d9c-4724-9514-c80dfb8ef895.png)
 
   c. table savings accounts
-  this data table originaly from source data (df_log)
+  this data originaly from source data (df_log)
   ![image](https://user-images.githubusercontent.com/55681442/171986581-aa419cb6-1dfd-42a6-8604-570a66e59e69.png)
-  this data table contain contain last update data based on last json file processed (df).
+  this data contain last update data based on last json file processed (df).
   ![image](https://user-images.githubusercontent.com/55681442/171986598-6667f356-98ca-4584-80b9-7013987e6168.png)
   
 2. Visualize the complete historical table view of the denormalized joined table in stdout by joining these three tables (hint: the join key lies in the `resources` section, please read carefully)
+  this data join all data in card with account 
+  ![image](https://user-images.githubusercontent.com/55681442/171990108-c26738c3-f482-4e91-881d-5b677f49fa3b.png)
+  this data join all data in saving_account with account 
+  ![image](https://user-images.githubusercontent.com/55681442/171990143-038de618-ec82-4191-b1c5-8661a1fe1b4a.png)
 
 3. From result from point no 2, discuss how many transactions has been made, when did each of them occur, and how much the value of each transaction?  
    Transaction is defined as activity which change the balance of the savings account or credit used of the card
