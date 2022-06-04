@@ -3,6 +3,7 @@ FROM ubuntu:latest
 RUN apt update
 RUN apt install python3 -y
 RUN apt install python3-pip -y
+RUN apt install nano -y
 
 WORKDIR /usr/app/src/
 
