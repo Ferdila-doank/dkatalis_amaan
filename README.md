@@ -79,11 +79,29 @@ the logic of code solution.py is :
   In that picture show in index 0 create new data in df and df_log (create same data). But in index 1 because the json only update field phone_number, so in df_log contain only data phone_number but in df in index 1 get value from index 0 and update data phone_number 
 
 3. Created method all_card_trans, this method is to join data df_acc with df_card with key is column card_id
-
-  ![image](https://user-images.githubusercontent.com/55681442/171990769-8633066f-fce9-4433-b8f5-e8f5b70020a6.png)
-
+  Logic for this method is to join 2 table df_acc and df_card but in df have 2 card_id (c1 and c2) in all transaction.
+  
+  ![image](https://user-images.githubusercontent.com/55681442/172011239-6c2d6270-945b-402e-83d9-59cbc6227ffb.png)
+  
+  in table df_acc we only get data with card_id c1 or c2 
+  
+  ![image](https://user-images.githubusercontent.com/55681442/172011734-cc97107a-ed77-4841-a061-891faedf2c4b.png)
+  
+  after that two table combine and the have result like this 
+  
+  ![image](https://user-images.githubusercontent.com/55681442/171990108-c26738c3-f482-4e91-881d-5b677f49fa3b.png)
+  
 4. Created method all_sv_trans, this method is to join data df_sv_acc with df_card with key is column savings_account_id
-
+  Logic this method same with method all_card but in this method combine df_acc and df_sv_acc with key savings_account_id, the different is in df_acc have many record have saving account id sa (because in df_sv_acc only have saving_account id sa).
+  
+  ![image](https://user-images.githubusercontent.com/55681442/172012483-34917824-4f9b-44ba-bf03-7c1149f4dbb6.png)
+  
+  table df_sv_acc have savings_account_id only sa
+  
+  ![image](https://user-images.githubusercontent.com/55681442/172012974-0c4e5ac8-3d3c-4bb0-a12f-368b0deace5e.png)
+  
+  in table df_acc have many record with savings_account_id sa, in this case we wil get only the last record with savings-account_id sa\
+  
   ![image](https://user-images.githubusercontent.com/55681442/171990805-90b6e467-0a44-4b6f-b692-c193a8b1f0b8.png)
 
 5. Created method card_trans, this method processing data in df_card only with credit value != 0 and join with df_acc with key card_id
