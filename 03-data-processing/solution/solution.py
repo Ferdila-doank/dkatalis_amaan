@@ -5,6 +5,8 @@ from datetime import datetime
 import warnings
 
 warnings.filterwarnings("ignore")
+pd.options.display.max_columns = None
+pd.options.display.max_rows = None
 
 class solution:
 
@@ -119,6 +121,25 @@ class solution:
                 
         return (df,df_log)
 
+    def all_card_trans(self,df_acc,df_card):
+        card_id = df_card["card_id"].unique()
+        
+        df_temp_acc = df_acc.loc[df_acc['card_id'].isin(card_id)][["account_id","address","email","name", "phone_number","card_id"]]  
+        df_all_card_trans = pd.merge(df_card,df_temp_acc,on="card_id")
+
+        return(df_all_card_trans)        
+
+    def all_sv_trans(self,df_acc,df_sv_acc):
+        sv_acc_id = df_sv_acc["savings_account_id"].unique()
+        df_temp_sv_acc = df_acc.loc[df_acc['savings_account_id'].isin(sv_acc_id)][["account_id","address","email","name", "phone_number","savings_account_id"]] 
+
+        df_temp_sv_acc2 = pd.DataFrame(columns=["account_id","address","email","name", "phone_number","savings_account_id"])
+        df_temp_sv_acc2.loc[0] = df_temp_sv_acc.loc[len(df_temp_sv_acc)-1]
+
+        df_all_card_trans = pd.merge(df_sv_acc,df_temp_sv_acc2,on="savings_account_id")
+
+        return(df_all_card_trans) 
+
     def card_trans(self,df_acc,df_card):
 
         df_temp_card = df_card.loc[df_card["credit_used"] != 0]
@@ -145,7 +166,6 @@ class solution:
 
         sav_id = df_sav_acc["savings_account_id"].unique()
         df_temp_acc = df_acc.loc[df_acc['savings_account_id'].isin(sav_id)][["account_id","address","email","name", "phone_number","savings_account_id"]] 
-        df_temp_acc = df_acc.loc[df_acc['savings_account_id'].isin(sav_id)]
 
         df_temp_acc2 = pd.DataFrame(columns=["account_id","address","email","name", "phone_number","savings_account_id"])
         df_temp_acc2.loc[0] = df_temp_acc.loc[len(df_temp_acc)-1]
@@ -173,7 +193,7 @@ if __name__ == '__main__':
     #create object bank from class solution
     bank = solution()
 
-    #run function bank.processing data fro processing data account 
+    #run method bank.processing data fro processing data account 
     df_acc,df_log_acc = bank.processing_data("account")
 
     #print df_log_acc get from processing file source account
@@ -181,10 +201,10 @@ if __name__ == '__main__':
     print(df_log_acc)
 
     #print df_acc get from processing file source & update base on value 
-    print("\n Update data base on file source account (tabular format)")
+    print("\n Update data based on file source account (tabular format)")
     print(df_acc)
 
-    #run function bank.processing data fro processing data card 
+    #run method bank.processing data fro processing data card 
     df_card,df_log_card = bank.processing_data("card")
 
     #print df_log_acc get from processing file source card
@@ -192,10 +212,10 @@ if __name__ == '__main__':
     print(df_log_card)    
 
     #print df_acc get from processing file source & update base on value
-    print("\n Update data base on file source card (tabular format)")
+    print("\n Update data based on file source card (tabular format)")
     print(df_card)
 
-    #run function bank.processing data fro processing data saving_account 
+    #run method bank.processing data fro processing data saving_account 
     df_sv_acc,df_log_sv_acc = bank.processing_data("saving_account")
 
     #print df_log_acc get from processing file source saving account
@@ -203,17 +223,31 @@ if __name__ == '__main__':
     print(df_log_sv_acc)    
 
     #print df_acc get from processing file source & update base on value
-    print("\n Update data base on file source card (tabular format)")    
+    print("\n Update data based on file source card (tabular format)")    
     print(df_sv_acc)
 
-    #processing card transaction (credit value != 0) using function bank.card_trans 
+    #run method bank.all_card_trans (all data card join with account)
+    df_all_card_trans = bank.all_card_trans(df_acc,df_card)
+
+    #print df_all_card_trans (all data card join with account)
+    print("\n all data card join with account")
+    print(df_all_card_trans)
+
+    #run method bank.all_sv_trans (all data saving account join with account)
+    df_all_sv_acc = bank.all_sv_trans(df_acc,df_sv_acc)
+
+    #print df_all_card_trans (all data card join with account)
+    print("\n all data saving account join with account")   
+    print(df_all_sv_acc)
+
+    #processing card transaction (credit value != 0) using method bank.card_trans 
     df_card_trans = bank.card_trans(df_acc,df_card)
 
     #print card transaction (credit value != 0)
     print ("\n Card transaction (credit value != 0)")
     print(df_card_trans)
 
-    #processing savings accounts transaction (change balance) using function bank.sav_trans 
+    #processing savings accounts transaction (change balance) using method bank.sav_trans 
     df_sav_acc = bank.sav_trans(df_acc,df_sv_acc)
 
     print("\n Savings accounts transaction (change balance)")
