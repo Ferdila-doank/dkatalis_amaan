@@ -20,6 +20,7 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
 
 ## 2. Tasks
 1. Visualize the complete historical table view of each tables in tabular format in stdout (hint: print your table)
+
   a. table account 
   this data table originaly from source data (df_log)
   ![image](https://user-images.githubusercontent.com/55681442/171983234-30849666-ce26-4de0-99bc-d4c5f944d431.png)
@@ -51,8 +52,6 @@ h. if you want see the coding solution use command **docker run -it dkatalis_sol
 
 the logic of code solution.py is :
 1. In init method will be declare path of data source (account, card and saving account) and declare column for each data 
-2. Create method processing data. in this method will be process each data in folder source. Json file will be transform to data frame(with tabular format) and store in df_log variable. Also will create other dataframe contain update data based on .json file fo example in account first json create 1 row and then in second json update phone number to new value. so in df will store original data from json and in df_log will be contain last update data based on last json file processed json file.
-
-4. 
+2. Create method processing data. in this method will be process each data in folder source. Json file will be transform to data frame(with tabular format) and store in df_log variable. Also will create other dataframe contain update data based on .json file fo example in account first json create 1 row and then in second json update phone number to new value. so in df will store original data from json and in df_log will be contain last update data based on last json file processed json file. 
 
 
