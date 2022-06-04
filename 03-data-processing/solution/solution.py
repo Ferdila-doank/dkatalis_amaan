@@ -4,6 +4,7 @@ import pandas as pd
 from datetime import datetime
 import warnings
 
+#remove warning wher running & show all column and rows when using dataframe
 warnings.filterwarnings("ignore")
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
