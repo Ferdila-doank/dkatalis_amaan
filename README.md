@@ -6,7 +6,16 @@ a. Please install docker first before doing next step, this is step installation
 
 b. Create folder for example, i create folder home with name docker-python using command **mkdir docker-python** 
 
-c. Go to folder docker-python **cd docker-python**
+d. Go to folder docker-python **cd docker-python**
 
-b. Clone this github to your local foldel using command 
+e. Clone this github to that folder using command **git clone https://github.com/Ferdila-doank/dkatalis_amaan**
+
+d. Go to folder dkatalis_amaan **cd dkatalis_amaan**
+
+f. Build docker container (this container will be name as dkatalis_amaan) using command **docker build -t dkatalis_amaan .**
+
+g. To run that docker using command **docker run dkatalis_amaan**
+
+
+
 
