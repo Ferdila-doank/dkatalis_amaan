@@ -96,13 +96,17 @@ the logic of code solution.py is :
   
   ![image](https://user-images.githubusercontent.com/55681442/172012483-34917824-4f9b-44ba-bf03-7c1149f4dbb6.png)
   
-  table df_sv_acc have savings_account_id only sa
+  table df_sv_acc have savings_account_id only sa1
   
   ![image](https://user-images.githubusercontent.com/55681442/172012974-0c4e5ac8-3d3c-4bb0-a12f-368b0deace5e.png)
   
-  in table df_acc have many record with savings_account_id sa, in this case we wil get only the last record with savings-account_id sa\
+  in table df_acc have many record with savings_account_id sa, in this case we wil get only the last record with savings-account_id sa1
   
   ![image](https://user-images.githubusercontent.com/55681442/171990805-90b6e467-0a44-4b6f-b692-c193a8b1f0b8.png)
+  
+  after that two table combine and the have result like this
+  
+  ![image](https://user-images.githubusercontent.com/55681442/171990143-038de618-ec82-4191-b1c5-8661a1fe1b4a.png)
 
 5. Created method card_trans, this method processing data in df_card only with credit value != 0 and join with df_acc with key card_id
   ![image](https://user-images.githubusercontent.com/55681442/171986685-7f1b71b7-371d-4e3c-bc80-41c94d52f343.png)
